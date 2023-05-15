@@ -1,0 +1,100 @@
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+        /* border: red solid 1px; */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    max-width: 600px;
+    height: 100dvh;
+    border: white solid 5px;
+    text-align: center;
+    animation: button-background 60s infinite;
+}
+
+h1 {
+    width: 75%;
+    margin: 4vh auto;
+    border: solid black 5px;
+    font-size: 3em;
+    animation: button-background 30s infinite;
+}
+
+button {
+    width: 200px;
+    min-height: 200px;
+    margin: 0vh auto;
+    padding: 1em 0;
+    border: solid black 5px;
+    border-radius: 50%;
+    font-size: 2em;
+    animation: button-background 5s infinite;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    color: white;
+}
+
+h3 {
+    width: 75%;
+    min-height: 40vh;
+    margin: 4vh auto;
+    padding: 2vh 2vw;
+    border: solid black 5px;
+    font-size: 5vh;
+    text-align: center;
+    animation: button-background 10s infinite;
+}
+
+/* Media queries */
+
+@media (min-width: 768px) {
+    main {
+        max-width: 1200px;
+        height: 90vh;
+        margin: 5vh auto;
+    }
+
+    h1 {
+        font-size: 5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    button {
+        width: 200px;
+        min-height: 200px;
+        font-size: 2em;
+    }
+
+    h3 {
+        min-height: 30vh;
+        max-height: 30vh;
+    }
+}
+
+@keyframes button-background {
+    0% {
+        background-color: red;
+    }
+    25% {
+        background-color: yellow;
+    }
+    50% {
+        background-color: rgb(0, 255, 0);
+    }
+    75% {
+        background-color: rgb(73, 73, 255);
+    }
+    100% {
+        background-color: red;
+    }
+  }
